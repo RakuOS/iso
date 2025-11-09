@@ -1,0 +1,36 @@
+menu hshift 0
+menu width 82
+
+menu title RakuOS - Boot menu
+include stdmenu.cfg
+
+label live-@FLAVOUR@-english
+        menu label ^Live (@FLAVOUR@) (English)
+        menu default
+        linux @LINUX@
+        initrd @INITRD@
+        append @APPEND_LIVE@ locales=en_US.UTF-8 keyboard-layout=us
+
+menu begin advanced
+	menu title Advanced options
+	include stdmenu.cfg
+
+	label live-@FLAVOUR@-failsafe
+		menu label ^Live (@FLAVOUR@ failsafe)
+		linux @LINUX@
+		initrd @INITRD@
+		append @APPEND_LIVE_FAILSAFE@
+
+	label hdt
+		menu label ^Hardware Detection Tool (HDT)
+		com32 hdt.c32
+
+	label memtest
+		menu label ^Memory Diagnostic Tool (memtest86+)
+		linux /live/memtest
+
+	label mainmenu
+		menu label ^Back..
+		menu exit
+
+menu end

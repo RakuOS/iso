@@ -1,0 +1,44 @@
+#!/bin/bash
+set -e
+
+echo "[HOOK] Generating initramfs for XanMod kernel..."
+
+# Ensure necessary filesystems are mounted
+mount -t proc proc /proc || true
+mount -t sysfs sys /sys || true
+mount -t devtmpfs dev /dev || true
+
+# Find installed XanMod kernel version
+KVER=$(ls /lib/modules | grep xanmod | head -n 1 || true)
+
+if [ -n "$KVER" ]; then
+    echo "Found XanMod kernel version: $KVER"
+
+    # Ensure initramfs-tools is available
+    if command -v update-initramfs >/dev/null 2>&1; then
+        update-initramfs -c -k "$KVER"
+    else
+        echo "Error: update-initramfs not found inside chroot!"
+    fi
+else
+    echo "Warning: XanMod kernel modules not found in /lib/modules"
+fi
+
+# Create symlinks for live-build to pick up
+KERNEL_IMG=$(ls /boot/vmlinuz-*xanmod* 2>/dev/null || true)
+INITRD_IMG=$(ls /boot/initrd.img-*xanmod* 2>/dev/null || true)
+
+if [ -n "$KERNEL_IMG" ] && [ -n "$INITRD_IMG" ]; then
+    echo "Detected XanMod kernel: $KERNEL_IMG"
+    mkdir -p /live
+    ln -sf "$KERNEL_IMG" /live/vmlinuz
+    ln -sf "$INITRD_IMG" /live/initrd.img
+else
+    echo "Warning: Kernel or initrd image still missing!"
+    ls -lh /boot || true
+fi
+
+# Cleanly unmount if we mounted them
+for mnt in /dev /sys /proc; do
+    mountpoint -q "$mnt" && umount "$mnt" || true
+done
