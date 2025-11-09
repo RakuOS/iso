@@ -4,6 +4,9 @@ live-config-systemd
 systemd-sysv
 grub-efi-amd64-bin
 
+#RakuOS Packages
+rakuos-branding
+
 #KDE
 plasma-desktop
 sddm
