@@ -4,6 +4,7 @@ set -e
 lb clean noauto "$@"
 rm -f binary.log prepare.log
 rm -rf	.build/ \
+    build.log \
 	config/binary \
 	config/bootstrap \
 	config/build \
