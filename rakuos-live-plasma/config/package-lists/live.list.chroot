@@ -5,6 +5,7 @@ systemd-sysv
 grub-efi-amd64-bin
 
 #RakuOS Packages
+rakuos-settings
 rakuos-branding
 rakuos-branding-plasma
 #KDE
