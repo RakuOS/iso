@@ -6,6 +6,7 @@ plymouth-themes
 grub-efi-amd64-bin
 
 #RakuOS Packages
+rakuos-keyring
 rakuos-settings
 rakuos-branding
 rakuos-settings-plasma
