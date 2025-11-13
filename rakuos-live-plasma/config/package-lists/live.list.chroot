@@ -4,6 +4,7 @@ live-config-systemd
 systemd-sysv
 plymouth-themes
 grub-efi-amd64-bin
+scx-scheds
 
 #RakuOS Packages
 rakuos-keyring

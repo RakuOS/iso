@@ -1,0 +1,6 @@
+#!/bin/bash
+set -e
+
+echo "Enabling Flathub..."
+
+systemctl enable scx.service
