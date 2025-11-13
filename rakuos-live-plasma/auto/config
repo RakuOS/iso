@@ -6,8 +6,8 @@ lb config noauto \
   --architectures amd64 \
   --debian-installer false \
   --archive-areas "main contrib non-free non-free-firmware" \
-  --mirror-bootstrap "https://repo.tohur.xyz/upstream/" \
-  --mirror-binary "https://repo.tohur.xyz/upstream/" \
+  --mirror-bootstrap "https://repo.rakuos.org/upstream/" \
+  --mirror-binary "https://repo.rakuos.org/upstream/" \
   --debootstrap-options "--include=apt-transport-https,ca-certificates,openssl" \
   --firmware-binary true \
   --firmware-chroot true \
