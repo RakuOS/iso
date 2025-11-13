@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
 
-echo "Enabling Flathub..."
+echo "Enabling scx-scheds..."
 
 systemctl enable scx.service
