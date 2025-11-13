@@ -1,0 +1,2 @@
+deb [arch=amd64,i386] https://repo.rakuos.org/rakuos rakuos main contrib non-free non-free-firmware
+deb http://deb.xanmod.org sid main

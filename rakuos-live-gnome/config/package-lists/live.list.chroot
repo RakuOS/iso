@@ -1,0 +1,27 @@
+live-boot
+live-config
+live-config-systemd
+systemd-sysv
+plymouth-themes
+grub-efi-amd64-bin
+scx-scheds
+
+#RakuOS Packages
+rakuos-keyring
+rakuos-settings
+rakuos-branding
+ananicy-cpp
+ananicy-rules
+
+#GNOME
+gnome-core
+gnome-software-plugin-deb
+gnome-software-plugin-flatpak
+gnome-software-plugin-fwupd
+
+# Extras
+firefox
+
+# Calamares installer
+calamares
+calamares-settings-rakuos

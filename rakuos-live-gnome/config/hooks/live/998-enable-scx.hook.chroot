@@ -1,0 +1,6 @@
+#!/bin/bash
+set -e
+
+echo "Enabling scx-scheds..."
+
+systemctl enable scx.service

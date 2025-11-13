@@ -1,0 +1,6 @@
+#!/bin/bash
+set -e
+
+echo "Fixing os-release..."
+rm /etc/os-release
+ln -s /usr/lib/os-release /etc/os-release

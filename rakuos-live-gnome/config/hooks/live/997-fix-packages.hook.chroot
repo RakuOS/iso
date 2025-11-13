@@ -1,0 +1,8 @@
+#!/bin/bash
+set -e
+
+echo "Fixing packages..."
+
+#apt remove desktop-base -y
+
+#apt install --reinstall rakuos-settings-plasma rakuos-branding-plasma
