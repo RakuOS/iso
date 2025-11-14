@@ -3,6 +3,6 @@ set -e
 
 echo "Fixing packages..."
 
-#apt remove desktop-base -y
+apt remove systemsettings -y
 
 #apt install --reinstall rakuos-settings-plasma rakuos-branding-plasma

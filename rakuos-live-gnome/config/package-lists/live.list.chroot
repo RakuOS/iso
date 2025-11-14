@@ -14,10 +14,33 @@ ananicy-cpp
 ananicy-rules
 
 #GNOME
-gnome-core
+gnome-shell
+eog
+evince
+gnome-backgrounds
+gnome-bluetooth-3-common
+gnome-calculator
+gnome-console
+gnome-disk-utility
+gnome-screenshot
+gnome-session
+gnome-shell-extensions
+gnome-software
+gnome-software-common
 gnome-software-plugin-deb
 gnome-software-plugin-flatpak
 gnome-software-plugin-fwupd
+gnome-system-monitor
+gnome-text-editor
+gnome-tour
+gnome-tweaks
+nautilus
+nautilus-wipe
+network-manager-gnome
+network-manager-openvpn
+network-manager-openvpn-gnome
+wl-clipboard
+xsel
 
 # Extras
 firefox
